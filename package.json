@@ -1,23 +1,25 @@
 {
   "name": "webdev",
   "version": "1.0.0",
-  "description": "Project",
-  "main": "index.js",
+  "description": "webdev project",
+  "main": "CloudNodeJs.js",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "express": "^4.15.3"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huoming/cs5610-summer-2017.git"
+    "url": "git+https://github.com/manasichaudhari/CS5610-Summer2017-WebDev-Manasi.git"
   },
   "author": "Manasi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/huoming/cs5610-summer-2017/issues"
+    "url": "https://github.com/manasichaudhari/CS5610-Summer2017-WebDev-Manasi/issues"
   },
-  "homepage": "https://github.com/huoming/cs5610-summer-2017#readme"
+  "homepage": "https://github.com/manasichaudhari/CS5610-Summer2017-WebDev-Manasi#readme"
 }
