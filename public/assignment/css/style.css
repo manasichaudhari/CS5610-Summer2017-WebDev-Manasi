@@ -1,0 +1,123 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top {
+    padding-right:5px ;
+}
+
+nav.navbar.navbar-default.navbar-fixed-bottom {
+    padding-right:5px ;
+}
+
+.row {
+    margin-left: 0px;
+
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.form-control {
+    margin-bottom: 5px;
+}
+
+textarea.form-control {
+    margin-bottom: 10px;
+}
+
+.blue-background {
+    background-color: #337ab7;
+}
+
+.blue-color {
+    color: #337ab7;
+}
+
+.black-color {
+    color: #000000;
+}
+
+.white-color {
+    color: #ffffff;
+}
+
+.navbar-brand {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.navbar-default .navbar-link {
+    color: #444444;
+}
+
+/*.navbar-default .navbar-text {*/
+    /*color: #ffffff;*/
+/*}*/
+
+.navbar-text {
+    margin: 15px 0;
+}
+
+.a .navbar-text {
+    color: black;
+}
+
+.padding-left {
+    padding-left: 15px;
+}
+
+.padding-right {
+    padding-right: 10px;
+}
+
+.glyphicon.glyphicon-cog.blue-color.pull-right {
+    padding-right: 5px;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.scrollable {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    overflow: scroll;
+    border-right: groove;
+
+}
+
+.scrollable::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .container-fluid .col-sm-8 {
+        width: 66.66666667%;
+        margin-left: 34.5%;
+    }
+}
+.wd-widget {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.wd-widget > .wd-toolbar {
+    position: absolute;
+    right: 0px;
+    opacity: 0.8;
+    padding:5px;
+    border-bottom-left-radius:10px ;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.wd-widget > img {
+    width: 100%;
+}

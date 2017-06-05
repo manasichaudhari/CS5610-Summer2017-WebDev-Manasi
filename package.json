@@ -4,6 +4,7 @@
   "description": "webdev",
   "main": "CloudNodeJs.js",
   "dependencies": {
+    "angular-route": "^1.6.4",
     "bootstrap": "^3.3.7",
     "express": "^4.15.3"
   },
