@@ -14,7 +14,7 @@
 
         function createWidget(pid,widgetType) {
             var widget = {};
-            widget.widgetType = widgetType
+            widget.widgetType = widgetType;
             var wgid = WidgetService.createWidget(pid,widget);
             $location.url('/user/'+model.uid+'/website/'+ model.wid + '/page/'
                 + model.pid + "/widget/"+wgid);

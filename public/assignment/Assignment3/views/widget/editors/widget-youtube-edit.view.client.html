@@ -21,6 +21,11 @@
     </div>
 </nav>
 
+<span class="text-danger padding-left"
+      ng-show="model.alert">
+      {{model.alert}}
+</span>
+
 <div class= "container-fluid">
 
     <label for="name">Name</label>
@@ -43,7 +48,8 @@
            ng-model = "model.widget.url"
            placeholder="url"
            value=""
-           id="url"/>
+           id="url"
+           required/>
 
     <label for="width">Width</label>
     <select class="form-control"

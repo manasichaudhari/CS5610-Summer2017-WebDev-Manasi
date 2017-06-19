@@ -13,7 +13,7 @@
         model.updatePage = updatePage;
 
         function init(){
-            model.page = PageService.findPageById(model.pid);
+            model.page = angular.copy(PageService.findPageById(model.pid));
         }
 
         init();

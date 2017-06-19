@@ -8,12 +8,12 @@
         var model = this;
 
         var uid = $routeParams['uid'];
-        model.uid = uid
+        model.uid = uid;
         model.updateUser = updateUser;
         model.deleteUser = deleteUser;
 
         function init() {
-            model.user = UserService.findUserById(uid);
+            model.user = angular.copy(UserService.findUserById(uid));
         }
         init();
 
