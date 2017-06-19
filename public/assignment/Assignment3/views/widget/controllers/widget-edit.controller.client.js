@@ -26,7 +26,7 @@
 
         function updateWidget(wgid, widget) {
             if(widget.widgetType === "HEADING") {
-                if(widget.text !== '' && typeof widget !== undefined) {
+                if(widget.text !== '' && typeof widget !== undefined && widget.text !== undefined) {
                     WidgetService.updateWidget(wgid, widget);
                     $location.url('/user/' + model.uid + '/website/' + model.wid + '/page/' + model.pid + '/widget');
                 }
@@ -34,7 +34,7 @@
                     model.alert = "*Name is required";
             }
             else if (widget.widgetType === "IMAGE" || widget.widgetType === "YOUTUBE") {
-                if(widget.url !== '' && typeof widget !== undefined) {
+                if(widget.url !== '' && typeof widget !== undefined && widget.url !== undefined) {
                     WidgetService.updateWidget(wgid, widget);
                     $location.url('/user/' + model.uid + '/website/' + model.wid + '/page/' + model.pid + '/widget');
                 }
@@ -43,7 +43,7 @@
             }
 
             else if (widget.widgetType === "HTML") {
-                if (widget.text !== '' && typeof widget !== undefined) {
+                if (widget.text !== '' && typeof widget !== undefined && widget.text !== undefined) {
                     WidgetService.updateWidget(wgid, widget);
                     $location.url('/user/' + model.uid + '/website/' + model.wid + '/page/' + model.pid + '/widget');
                 }
