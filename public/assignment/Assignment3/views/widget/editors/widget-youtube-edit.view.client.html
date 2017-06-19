@@ -1,0 +1,75 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <p class="navbar-text pull-left">
+                <a  href="#!/user/{{model.uid}}/website/{{model.wid}}/page/{{model.pid}}/widget" class="navbar-link">
+            <span class="glyphicon glyphicon-chevron-left">
+            </span>
+                </a>
+            </p>
+            <a class="navbar-brand" href="#">
+                YouTube Video Editor
+            </a>
+            <p class="navbar-text pull-right">
+                <a ng-click="model.updateWidget(model.wgid,model.widget)" class="navbar-link">
+          <span class="glyphicon glyphicon-ok ">
+          </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</nav>
+
+<div class= "container-fluid">
+
+    <label for="name">Name</label>
+    <input class="form-control"
+           ng-model = "model.widget.name"
+           placeholder="Video Title"
+           value=""
+           id="name"/>
+
+    <label for="text">Text</label>
+    <input class="form-control"
+           ng-model = "model.widget.text"
+           placeholder="Video text"
+           value=""
+           id="text"/>
+
+
+    <label for="url">URL</label>
+    <input class="form-control"
+           ng-model = "model.widget.url"
+           placeholder="url"
+           value=""
+           id="url"/>
+
+    <label for="width">Width</label>
+    <select class="form-control"
+           ng-model = "model.widget.width"
+           placeholder="100%"
+           id="width">
+            <option value="100%" selected>100%</option>
+            <option value="75%">75%</option>
+            <option value="50%">50%</option>
+            <option value="25%">25%</option>
+    </select>
+
+    <a ng-click="model.updateWidget(model.wgid,model.widget)" class="btn btn-block btn-success">Upload</a>
+    <a ng-click="model.deleteWidget(model.wgid)" class="btn btn-block btn-danger">Delete</a>
+
+
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <p class="navbar-text pull-right">
+            <a href="#!/user/{{model.uid}}" class="navbar-link">
+                <span class="glyphicon glyphicon-user ">
+                </span>
+            </a>
+        </p>
+    </div>
+</nav>
