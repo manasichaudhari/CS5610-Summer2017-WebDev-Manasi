@@ -23,11 +23,12 @@
         }
         
         function updateWebsite(websiteId,website) {
-            WebsiteService.updateWebsite(websiteId,website);
+
             if(website.name === null || typeof website.name === 'undefined' || website.name ==='') {
                 model.alert= "*Name is required";
             }
             else {
+                WebsiteService.updateWebsite(websiteId,website);
                 $location.url('/user/' + model.uid + '/website');
             }
         }

@@ -17,7 +17,8 @@
 
         function createWebsite(uid,website) {
             website=WebsiteService.createWebsite(uid,website);
-            if(website === null || typeof website === 'undefined') {
+            if(website === null || typeof website === 'undefined' || typeof website.name === 'undefined' || website.name === '') {
+
                 model.alert= "Fill out all fields";
             }
             else {

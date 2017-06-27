@@ -51,7 +51,7 @@
     }
 
     function createWebsite(userId, website) {
-        if(website !== null && typeof website !== 'undefined') {
+        if(website !== null && typeof website !== 'undefined' && typeof website.name !== 'undefined' &&  website.name !== '') {
             website._id = (new Date().getTime()) + "";
             website.developerId = userId;
             websites.push(website);
@@ -60,7 +60,7 @@
     }
 
     function updateWebsite(websiteId, website) {
-        if(website.name !== null && typeof website !== 'undefined' && website.name !== '') {
+        if(website.name !== null && typeof website !== 'undefined' && typeof website.name !== 'undefined' && website.name !== '') {
             var websiteToBeUpdated = findWebsiteById(websiteId);
             var index = websites.indexOf(websiteToBeUpdated);
             websites[index] = website;
