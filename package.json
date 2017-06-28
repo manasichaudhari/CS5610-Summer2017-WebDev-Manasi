@@ -1,11 +1,10 @@
 {
   "name": "webdev",
   "version": "1.0.0",
-  "description": "Repository for web dev course. E-mail: chaudhari.m@husky.neu.edu",
-  "main": "server.js",
+  "description": "webdev",
+  "main": "CloudNodeJs.js",
   "dependencies": {
     "angular-route": "^1.6.4",
-    "angular": "^1.6.4",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "cookie-parser": "^1.4.3",
@@ -19,13 +18,13 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node CloudNodeJs.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manasichaudhari/CS5610-Summer2017-WebDev-Manasi.git"
   },
-  "author": "Mau",
+  "author": "Manasi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/manasichaudhari/CS5610-Summer2017-WebDev-Manasi/issues"
