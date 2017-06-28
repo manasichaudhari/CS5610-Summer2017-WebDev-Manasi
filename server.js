@@ -1,15 +1,19 @@
-//***File for localhost***
-
 //using express with node js
-var express = require('express');
-//var bodyParser = require('body-parser');
+var app = require('./express');
+var bodyParser = require('body-parser');
 
-//initialize app as an express application
-var app = express();
+// var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-var ipaddress = '127.0.0.1';
-var port = process.env.PORT || 3000;
+require("./assignment/app");
 
-app.use(express.static(__dirname+'/public'));
-app.listen(port, ipaddress);
-console.log("hello world! Port is" + port);
+// configure a public directory to host static content
+app.use(app.express.static(__dirname+'/'));
+
+app.set('port', (process.env.PORT || 5000));
+
+
+app.listen(app.get('port'), function() {
+    console.log('Running on port', app.get('port'));
+});
