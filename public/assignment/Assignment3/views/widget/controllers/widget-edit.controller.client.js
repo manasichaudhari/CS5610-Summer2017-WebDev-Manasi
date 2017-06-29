@@ -31,7 +31,7 @@
                     $location.url('/user/' + model.uid + '/website/' + model.wid + '/page/' + model.pid + '/widget');
                 }
                 else
-                    model.alert = "*Name is required";
+                    model.alert = "*Text is required";
             }
             else if (widget.widgetType === "IMAGE" || widget.widgetType === "YOUTUBE") {
                 if(widget.url !== '' && typeof widget !== undefined && widget.url !== undefined) {
