@@ -38,7 +38,7 @@
             }
             else if ((widget.widgetType === "IMAGE" || widget.widgetType === "YOUTUBE") &&
                 (widget.url === '' || typeof widget === undefined || widget.url === undefined)) {
-                    model.alert = "*URL is required. Click extract URL if uploading image from system";
+                    model.alert = "*URL is required. First click extract URL and then click upload if uploading image from system";
             }
             else {
                 WidgetService.updateWidget(wgid, widget)
