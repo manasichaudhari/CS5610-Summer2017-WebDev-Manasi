@@ -1,0 +1,58 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <p class="navbar-text pull-left">
+                <a href="#!/user/{{model.uid}}/website/{{model.wid}}/page/" class="navbar-link">
+            <span class="glyphicon glyphicon-chevron-left">
+            </span>
+                </a>
+            </p>
+            <a class="navbar-brand" >
+                Widgets
+            </a>
+            <p class="navbar-text pull-right">
+                <a href="#!/user/{{model.uid}}/website/{{model.wid}}/page/{{model.pid}}/widget/new"
+                   class="navbar-link">
+          <span class="glyphicon glyphicon-plus ">
+          </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</nav>
+
+<div wbdv-sortable sort-widget="model.sortWidget(initial,final)" class= "container-fluid wd-widgetlist">
+    <div ng-repeat="widget in model.widgets" class="wd-widget padding-bottom">
+        <div class="wd-widget-toolbar">
+            <a ng-click=model.widgetCog(widget)
+               class="wd-colour-scheme">
+                <span class="glyphicon glyphicon-cog"></span>
+            </a>
+            <span class="glyphicon glyphicon-align-justify"></span>
+        </div>
+        <div ng-include="model.widgetUrl(widget)"></div>
+    </div>
+
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <p class="navbar-text pull-left">
+            <span class="glyphicon glyphicon-play navbar-link">
+            </span>
+        </p>
+        <p class="navbar-text pull-left">
+            <span class="glyphicon glyphicon-eye-open navbar-link">
+            </span>
+        </p>
+        <p class="navbar-text pull-right">
+            <a href="#!/user/{{model.uid}}" class="navbar-link">
+                <span class="glyphicon glyphicon-user ">
+                </span>
+            </a>
+        </p>
+    </div>
+</nav>
+

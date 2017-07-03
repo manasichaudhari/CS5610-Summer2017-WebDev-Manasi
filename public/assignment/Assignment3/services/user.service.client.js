@@ -71,6 +71,7 @@
         var index = users.indexOf(u);
 
         users.splice(index,1);
+        u.username = user.username
         u.firstName = user.firstName;
         u.lastName = user.lastName;
         u.email = user.email;

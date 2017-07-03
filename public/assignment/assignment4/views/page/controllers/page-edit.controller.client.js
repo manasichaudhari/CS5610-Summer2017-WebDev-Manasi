@@ -1,0 +1,56 @@
+(function(){
+    angular.module('WebAppMaker')
+        .controller('EditPageController',editPageController);
+
+    function editPageController($routeParams,$location,PageService) {
+
+        var model = this;
+
+        model.uid = $routeParams['uid'];
+        model.wid = $routeParams['wid'];
+        model.pid = $routeParams['pid'];
+        model.deletePage = deletePage;
+        model.updatePage = updatePage;
+
+        function init(){
+            PageService
+                .findPageById(model.pid)
+                .then(renderPage);
+            PageService
+                .findPageByWebsiteId(model.wid)
+                .then(renderPages);
+        }
+
+        init();
+
+        function deletePage(pageId) {
+            PageService
+                .deletePage(pageId)
+                .then(function () {
+                    $location.url('/user/'+model.uid+'/website/'+model.wid+'/page');
+                });
+
+        }
+
+        function updatePage(pageId,page) {
+            if(page === null || typeof page === 'undefined' || page.name === '') {
+                model.alert="*Page name is required";
+            }
+            else {
+                PageService
+                    .updatePage(pageId, page)
+                    .then(function () {
+                        $location.url('/user/' + model.uid + '/website/' + model.wid + '/page');
+                    });
+            }
+        }
+
+        function renderPage(page) {
+            model.page = page;
+        }
+
+        function renderPages(pages) {
+            model.pages = pages;
+        }
+    }
+})();
