@@ -62,6 +62,10 @@ textarea.form-control {
     margin: 15px 0;
 }
 
+.big-icon {
+    font-size: 32px;
+}
+
 .a .navbar-text {
     color: black;
 }
