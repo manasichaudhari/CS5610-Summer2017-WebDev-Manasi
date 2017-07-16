@@ -1,0 +1,53 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <p class="navbar-text pull-left">
+                <a href="#!/user/{{model.uid}}/website/{{model.wid}}/page/{{model.pid}}/widget" class="navbar-link">
+            <span class="glyphicon glyphicon-chevron-left">
+            </span>
+                </a>
+            </p>
+            <a class="navbar-brand" href="">
+                Choose Widget
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class= "container-fluid">
+    <p><a ng-click="model.createWidget(model.pid,'HEADING')"
+            class="panel-title wd-colour-scheme"> Header
+        </a>
+    </p>
+    <p>
+        <a ng-click = "model.createWidget(model.pid,'HTML')"
+            class="panel-title wd-colour-scheme"> HTML
+    </a>
+    </p>
+    <p><a ng-click="model.createWidget(model.pid,'IMAGE')"
+          class="panel-title wd-colour-scheme"> Image
+    </a>
+    </p>
+    <p><a ng-click="model.createWidget(model.pid,'YOUTUBE')"
+          class="panel-title wd-colour-scheme"> YouTube
+    </a>
+    </p>
+    <p>
+        <a ng-click="model.createWidget(model.pid,'TEXT')"
+           class="panel-title wd-colour-scheme"> Text Input
+        </a>
+    </p>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <p class="navbar-text pull-right">
+            <a href="#!/user/{{model.uid}}" class="navbar-link">
+                <span class="glyphicon glyphicon-user ">
+                </span>
+            </a>
+        </p>
+    </div>
+</nav>
+
