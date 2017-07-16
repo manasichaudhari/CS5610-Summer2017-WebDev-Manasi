@@ -101,7 +101,8 @@
     function updateUser(req, res) {
         var user = req.body;
         var userId = req.params['userId'];
-        userModel.updateUser(userId,user)
+        userModel
+            .updateUser(userId,user)
             .then(function () {
                 res.sendStatus(200);
                 return;

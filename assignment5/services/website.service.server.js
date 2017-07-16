@@ -11,8 +11,8 @@ function findAllWebsitesForUser(req,res) {
     var userId = req.params['userId'];
     websiteModel
         .findAllWebsitesForUser(userId)
-        .then(function (results) {
-            res.json(results);
+        .then(function (websites) {
+            res.json(websites);
             return;
         });
 }

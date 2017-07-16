@@ -20,7 +20,6 @@
             model.widgetUrl = widgetUrl;
             model.widgetCog = widgetCog;
             model.sortWidget = sortWidget;
-            model.updateTextWidget = updateTextWidget;
         }
 
         init();
@@ -62,12 +61,6 @@
             WidgetService.sortWidget(pid,initial,final)
                 .then(function (response) {
                     return response.data
-                });
-        }
-
-        function updateTextWidget(widget) {
-            widgetService.updateWidget(widget._id, widget)
-                .then(function () {
                 });
         }
      }

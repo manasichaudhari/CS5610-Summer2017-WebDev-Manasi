@@ -26,7 +26,7 @@ function createWidget(req,res) {
     var widget = req.body;
     return widgetModel.createWidget(pageId,widget)
         .then(function (widget) {
-            res.send(widget);
+            res.json(widget);
             return;
         });
 }
