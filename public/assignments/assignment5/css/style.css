@@ -1,0 +1,123 @@
+input.form-control,
+textarea.form-control,
+select.form-control ,
+button.btn.btn-block.btn-primary.wd-upload-btn{
+    margin-bottom: 5px;
+}
+
+body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.navbar-default > div {
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+.navbar-default .navbar-brand ,
+.navbar-default .navbar-link {
+    color: #fff;
+}
+
+.navbar-header,
+.navbar-fixed-bottom{
+    width: 100%;
+}
+
+.navbar-header.home-header{
+    width: auto;
+}
+
+.navbar.navbar-default a{
+    color: white;
+}
+
+.blue-background {
+    background-color: #337ab7;
+}
+.white-text {
+    color: white;
+}
+
+.wd-widget{
+    margin-bottom: 10px;
+}
+
+.wd-widget > img {
+    width: 100%;
+}
+
+.wd-widget > .wd-widget-toolbar {
+    position: absolute;
+    right: 15px;
+    background: white;
+    opacity: 0.8;
+    padding: 5px;
+    border-bottom-left-radius: 8px;
+    z-index: 99;
+}
+
+.wd-colour-scheme {
+    color: #337ab7;
+}
+
+.wd-colour-scheme.padding-left {
+    padding-left: 30px;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    background-color: #565054;
+    border-color: #565054;
+}
+
+.wd-youtube-video{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.wd-youtube-video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+span.glyphicon.glyphicon-eye-open {
+    color: white;
+}
+
+span.glyphicon.glyphicon-play{
+    padding-right: 10px;
+    color: white;
+}
+
+.padding-right {
+    padding-right: 15px;
+}
+
+.padding-left {
+    padding-left: 15px;
+}
+
+.padding-bottom {
+    padding-bottom: 10px;
+}
+
+
+.wd-body-container,
+.wd-widgetlist{
+    padding-bottom: 40px;
+}
+
+.wd-widget-flikr{
+    display:block;
+    max-width: 100%;
+    max-height:100%;
+    width: 100%;
+    height: auto;
+}

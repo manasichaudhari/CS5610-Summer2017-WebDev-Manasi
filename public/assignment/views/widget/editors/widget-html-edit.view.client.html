@@ -1,0 +1,57 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <p class="navbar-text pull-left">
+                <a href="#!/website/{{model.wid}}/page/{{model.pid}}/widget" class="navbar-link">
+            <span class="glyphicon glyphicon-chevron-left">
+            </span>
+                </a>
+            </p>
+            <a class="navbar-brand" href="#">
+                HTML Editor
+            </a>
+            <p class="navbar-text pull-right">
+                <a ng-click="model.updateWidget(model.wgid,model.widget)" class="navbar-link">
+          <span class="glyphicon glyphicon-ok ">
+          </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class= "container-fluid wd-body-container">
+    <div class="alert-danger alert padding-left"
+         ng-show="model.alert">
+        {{model.alert}}
+    </div>
+    <label for="name">Name</label>
+    <input class="form-control"
+           ng-model="model.widget.name"
+           placeholder="HTML Title"
+           id="name" />
+
+    <div ng-model="model.widget.text"
+         text-angular
+         ta-toolbar="[['h1','h2','h3'],['bold','italics','underline','strikeThrough'],
+        ['ul','ol'],['justifyLeft','justifyCenter','justifyRight','justifyFull'],
+        ['indent','outdent'],['html']]">
+    </div>
+    <a ng-click="model.updateWidget(model.wgid,model.widget)" class="btn btn-block btn-success">Update</a>
+    <a ng-click="model.deleteWidget(model.pid,model.wgid)" class="btn btn-block btn-danger">Delete</a>
+
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <p class="navbar-text pull-right">
+            <a href="#!/profile" class="navbar-link">
+                <span class="glyphicon glyphicon-user ">
+                </span>
+            </a>
+        </p>
+    </div>
+</nav>
+
+

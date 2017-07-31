@@ -1,0 +1,97 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row navbar-header">
+            <div class="col-sm-4 hidden-xs">
+                <p class="navbar-text pull-left">
+                    <a href="#!/website/" class="navbar-link">
+                        <span class="glyphicon glyphicon-chevron-left">
+                        </span>
+                    </a>
+                </p>
+            <a class="navbar-brand" href="">
+               Websites
+            </a>
+                <p class="navbar-text pull-right">
+                    <a href="#!/website/new" class="navbar-link">
+                    <span class="glyphicon glyphicon-plus " >
+                    </span>
+                    </a>
+                </p>
+            </div>
+
+            <div class="col-xs-11 col-sm-7" >
+                <div class="visible-xs" >
+                    <p class="navbar-text pull-left">
+                        <a href="#!/website/"
+                           class="navbar-link">
+                        <span class="glyphicon glyphicon-chevron-left">
+                        </span>
+                        </a>
+                    </p>
+                </div>
+                <a class="navbar-brand" href="">
+                    Edit Website
+                </a>
+
+            </div>
+            <p class="navbar-text pull-right">
+                <a ng-click="model.updateWebsite(model.wid,model.website)" class="navbar-link">
+                        <span class="glyphicon glyphicon-ok ">
+                        </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</nav>
+
+<div class= "container-fluid">
+        <div class="row">
+            <div class="col-xs-4 hidden-xs" >
+                <ul class="list-group">
+                    <li ng-repeat="website in model.websites" class="list-group-item " >
+                        <a href="#!/website/{{website._id}}/page"
+                           class="wd-colour-scheme">
+                            {{website.name}}
+                        </a>
+                        <a href="#!/website/{{website._id}}"
+                           class="wd-colour-scheme">
+                            <span class="glyphicon glyphicon-cog pull-right"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-8" >
+                <div ng-show="model.alert"
+                     class="alert-danger alert padding-left">{{model.alert}}</div>
+                <label for="name">Name</label>
+                <input class="form-control"
+                       ng-model="model.website.name"
+                       placeholder="Website Name"
+                       value=""
+                       id="name"/>
+                <label for="description">Description</label>
+                <textarea class="form-control"
+                          ng-model ="model.website.description"
+                          rows="5"
+                          placeholder="Website Description"
+                          id="description">
+                </textarea>
+                <a ng-click="model.updateWebsite(model.wid,model.website)"
+                   class="btn btn-block btn-success">Update</a>
+                <a ng-click="model.deleteWebsite(model.uid,model.wid)"
+                   class="btn btn-block btn-danger">Delete</a>
+            </div>
+        </div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <p class="navbar-text pull-right">
+            <a href="#!/profile" class="navbar-link">
+                <span class="glyphicon glyphicon-user ">
+                </span>
+            </a>
+        </p>
+    </div>
+</nav>
