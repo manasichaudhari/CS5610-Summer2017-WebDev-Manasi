@@ -19,7 +19,7 @@
     var facebookConfig = {
         clientID: process.env.FACEBOOK_CLIENT_ID,
         clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-        callbackURL: "http://localhost:3000/auth/facebook/callback",
+        callbackURL: process.env.FACEBOOK_CALLBACK_URL,
         profileFields: ['id', 'emails', 'displayName', 'name']
     };
     passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
